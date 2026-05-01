@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定制工业除尘环保雾炮机 全自动高射程 - 河北泰首机械设备有限公司</title>
+    <style>
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "微软雅黑", Arial, sans-serif;
+        }
+        body {
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        /* 顶部店铺信息栏 */
+        .shop-header {
+            background-color: #fff;
+            padding: 15px 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .shop-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .shop-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+        .shop-metrics {
+            display: flex;
+            gap: 15px;
+            font-size: 12px;
+            color: #666;
+        }
+        .shop-metrics span {
+            display: inline-block;
+        }
+        .shop-actions {
+            margin-left: auto;
+            display: flex;
+            gap: 10px;
+        }
+        .shop-actions button {
+            padding: 5px 10px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+        /* 主体内容容器 */
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 10px auto;
+            background-color: #fff;
+            padding: 20px;
+            gap: 20px;
+        }
+        /* 左侧商品图片区 */
+        .product-img-area {
+            width: 45%;
+        }
+        .main-img {
+            width: 100%;
+            border-radius: 5px;
+        }
+        .img-thumbs {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+            overflow-x: auto;
+            padding-bottom: 5px;
+        }
+        .img-thumb {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #eee;
+            border-radius: 3px;
+            cursor: pointer;
+            object-fit: cover;
+        }
+        .img-thumb:hover {
+            border-color: #ff6700;
+        }
+        /* 右侧商品信息区 */
+        .product-info-area {
+            width: 55%;
+        }
+        .product-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        .price-area {
+            margin-bottom: 20px;
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .price-label {
+            font-size: 14px;
+            color: #999;
+        }
+        .price-value {
+            font-size: 24px;
+            color: #ff4400;
+            font-weight: bold;
+            margin: 5px 0;
+        }
+        .price-range {
+            font-size: 16px;
+            color: #ff4400;
+        }
+        .delivery-info {
+            font-size: 12px;
+            color: #666;
+            margin: 10px 0;
+        }
+        /* 购买区域 */
+        .buy-area {
+            margin-top: 20px;
+        }
+        .spec-item {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        .spec-label {
+            width: 60px;
+            color: #666;
+        }
+        .spec-value {
+            flex: 1;
+        }
+        .num-select {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .num-btn {
+            width: 28px;
+            height: 28px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            text-align: center;
+            line-height: 28px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        .num-input {
+            width: 50px;
+            height: 28px;
+            border: 1px solid #ddd;
+            text-align: center;
+            border-radius: 3px;
+        }
+        .buy-btn {
+            width: 100%;
+            height: 45px;
+            background-color: #ff6700;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        .buy-btn:hover {
+            background-color: #ff4400;
+        }
+        /* 右侧悬浮工具栏 */
+        .float-toolbar {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .tool-item {
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border: 1px solid #eee;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+        }
+        /* 底部标签栏 */
+        .tab-bar {
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 10px 20px;
+            border-top: 1px solid #eee;
+            display: flex;
+            gap: 20px;
+        }
+        .tab-item {
+            font-size: 14px;
+            color: #666;
+            cursor: pointer;
+            padding: 5px 0;
+        }
+        .tab-item.active {
+            color: #ff6700;
+            border-bottom: 2px solid #ff6700;
+        }
+        /* 登录提示栏 */
+        .login-tip {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 14px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .login-btn {
+            background-color: #ff6700;
+            color: #fff;
+            border: none;
+            padding: 5px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 顶部店铺信息 -->
+    <div class="shop-header">
+        <div class="shop-info">
+            <div class="shop-name">河北泰首机械设备有限公司</div>
+            <div class="shop-metrics">
+                <span>入驻8年 | 主营：空气净化设备</span>
+                <span>店铺回头率 59%</span>
+                <span>店铺服务分 5.0分</span>
+                <span>准时发货率 97%</span>
+                <span>店铺好评率 99.7%</span>
+            </div>
+            <div class="shop-actions">
+                <button>关注</button>
+                <button>客服</button>
+                <button>商品</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主体内容 -->
+    <div class="container">
+        <!-- 左侧商品图片 -->
+        <div class="product-img-area">
+            <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/16eaa2c37aa94320a3ada2f8c111e364.png~tplv-a9rns2rl98-image.png" alt="工业级雾炮机" class="main-img">
+            <div class="img-thumbs">
+                <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/16eaa2c37aa94320a3ada2f8c111e364.png~tplv-a9rns2rl98-image.png" alt="缩略图1" class="img-thumb">
+                <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/16eaa2c37aa94320a3ada2f8c111e364.png~tplv-a9rns2rl98-image.png" alt="缩略图2" class="img-thumb">
+                <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/16eaa2c37aa94320a3ada2f8c111e364.png~tplv-a9rns2rl98-image.png" alt="缩略图3" class="img-thumb">
+                <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/16eaa2c37aa94320a3ada2f8c111e364.png~tplv-a9rns2rl98-image.png" alt="缩略图4" class="img-thumb">
+                <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/16eaa2c37aa94320a3ada2f8c111e364.png~tplv-a9rns2rl98-image.png" alt="缩略图5" class="img-thumb">
+                <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/16eaa2c37aa94320a3ada2f8c111e364.png~tplv-a9rns2rl98-image.png" alt="缩略图6" class="img-thumb">
+            </div>
+        </div>
+
+        <!-- 右侧商品信息 -->
+        <div class="product-info-area">
+            <div class="product-title">定制工业除尘环保雾炮机全自动高射程</div>
+            <div class="price-area">
+                <div class="price-label">价格</div>
+                <div class="price-range">¥1000.00 ~ ¥20000.00</div>
+                <div class="price-value">1台起批</div>
+                <div class="delivery-info">河北邢台 送至 河北邢台 ✔ 最快支付后1天发货</div>
+                <div class="delivery-info">延期必赔 · 品质保障 · 印错包赔 · 送装保障 · 破损包赔</div>
+            </div>
+
+            <div class="buy-area">
+                <div class="spec-item">
+                    <div class="spec-label">单价</div>
+                    <div class="spec-value"><input type="text" value="1000.00" readonly style="border:none; color:#ff4400;"></div>
+                </div>
+                <div class="spec-item">
+                    <div class="spec-label">数量</div>
+                    <div class="spec-value num-select">
+                        <div class="num-btn">-</div>
+                        <input type="text" value="1" class="num-input">
+                        <div class="num-btn">+</div>
+                    </div>
+                </div>
+                <button class="buy-btn">登录查看全部规格</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部标签栏 -->
+    <div class="tab-bar">
+        <div class="tab-item active">商品评价</div>
+        <div class="tab-item">商品属性</div>
+        <div class="tab-item">包装信息</div>
+        <div class="tab-item">商品详情</div>
+        <div class="tab-item">热门推荐</div>
+    </div>
+
+    <!-- 右侧悬浮工具栏 -->
+    <div class="float-toolbar">
+        <div class="tool-item">客服</div>
+        <div class="tool-item">询价</div>
+        <div class="tool-item">APP</div>
+        <div class="tool-item">全网价</div>
+        <div class="tool-item">更多</div>
+        <div class="tool-item">顶部</div>
+    </div>
+
+    <!-- 底部登录提示 -->
+    <div class="login-tip">
+        登录查看更多福利~ <button class="login-btn">一键登录</button>
+    </div>
+
+    <script>
+        // 数量加减功能
+        const minusBtn = document.querySelector('.num-btn:first-child');
+        const plusBtn = document.querySelector('.num-btn:last-child');
+        const numInput = document.querySelector('.num-input');
+        
+        minusBtn.addEventListener('click', () => {
+            let num = parseInt(numInput.value);
+            if (num > 1) {
+                numInput.value = num - 1;
+            }
+        });
+        
+        plusBtn.addEventListener('click', () => {
+            let num = parseInt(numInput.value);
+            numInput.value = num + 1;
+        });
+
+        // 回到顶部功能
+        const topBtn = document.querySelector('.float-toolbar .tool-item:last-child');
+        topBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+</html>
